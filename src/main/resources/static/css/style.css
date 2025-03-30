@@ -1,0 +1,39 @@
+/* Modern documentation styling */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+nav a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.documentation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+pre {
+    background: #f5f6f7;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.code-tabs button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
