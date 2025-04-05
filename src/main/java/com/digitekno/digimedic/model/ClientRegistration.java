@@ -1,23 +1,37 @@
 package com.digitekno.digimedic.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Table(name = "client_registrations")
 public class ClientRegistration {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+    
+    @Column(nullable = false)
     private String organizationName;
+    
+    @Column(nullable = false, unique = true)
     private String email;
+    
+    @Column(nullable = false)
+    private String contactPerson;
+    
+    private String phoneNumber;
+    
+    @Column(nullable = false, unique = true)
     private String clientId;
+    
+    @Column(nullable = false)
     private String secretKey;
+    
+    private boolean isActive;
+    
     private LocalDateTime createdAt;
-    private LocalDateTime lastUpdated;
-    private boolean active;
+    
+    private LocalDateTime updatedAt;
 }

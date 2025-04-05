@@ -16,6 +16,10 @@ public class RegistrationController {
 
     private final RegistrationService registrationService;
 
+    public RegistrationController(RegistrationService registrationService) {
+        this.registrationService = registrationService;
+    }
+
     @PostMapping("/register")
     @Operation(summary = "Register new client")
     public ResponseEntity<RegistrationResponse> registerClient(
